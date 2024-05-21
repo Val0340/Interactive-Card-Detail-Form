@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Interactive card details form</title>
+
+  <!-- Import Google Fonts and any other external CDN/style sheets here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <!-- Project Stylesheet as Last Stylesheet-->
+  <link rel="stylesheet" href="style.css">
+  <!-- Link script here with DEFER attribute to tell browser to load file last. -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div id="desktoppic" >
+  <img src="images\bg-main-desktop.png" id="desktopimg">
+  <div id="frontcard2">
+    <img class="frontcard" src="images\bg-card-front.png">
+    <svg id="svg1" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+      <p class='card-num2' >0000 0000 0000 0000</p>
+      <span class="cardname2" >Jane Appleseed</span>
+      <span class="exp3">00</span><span class="slash">/</span><span class="exp4" >00</span>
+  </div>
+  <div id="backcard2">
+    <img class="backcard" src="images\bg-card-back.png">
+      <span class="backCVC2">000</span>
+  </div>
+</div>
+<div id="container"> 
+  <img src="images\bg-main-mobile.png" id="mobileimg">
+    <div id="frontcard">
+      <img class="frontcard" src="images\bg-card-front.png">
+      <svg id="svg1" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+        <p class='card-num'>0000 0000 0000 0000</p>
+        <span class="cardname">Jane Appleseed</span>
+        <span class="exp">00</span><span class="slash">/</span><span class="exp2">00</span>
+    </div>
+    <div id="backcard">
+      <img class="backcard" src="images\bg-card-back.png">
+        <span class="backCVC">000</span>
+    </div>
+  <!-- </div>
+  <div id="MobileV">
+    <div>
+      <img src="images\bg-card-front.png">
+      0000 0000 0000 0000
+      Jane Appleseed
+      00/00
+    </div>
+    <div>
+      <img src="images\bg-card-back.png">
+      000</div>
+  </div> -->
+  
+<form>
+  <label for="Cardholder">Cardholder Name</label>
+  <input type="text" placeholder='e.g. Jane Appleseed' name="Cardholder" id="Cardholder" required>
+
+  <label for="CardNumber">Card Number</label>
+  <input type="number" placeholder="e.g. 1234 5678 9123 0000" required name="CardNumber" id="CardNumber" >
+
+  <label for="ExpDate"> Exp. Date (MM/YY)</label><label for="Cvc">CVC</label> 
+  <input type="number" placeholder="MM" name="ExpDate" id="ExpDate" class="Ex1" required min="0" max="99">
+  <input type="number" placeholder="YY" name="ExpDate" id="ExpDate" class="Ex2" required min="0" max="99">
+  <input type="number" placeholder="e.g. 123" name="Cvc" id="Cvc" required min="000" max="999">
+
+  <button class="confirm" type="button">Confirm</button> 
+</form>
+
+  <!-- Completed state start -->
+<div id="container2">
+  <div class="flexdiv">
+  <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+  <p class="thankyou">Thank you!</p>
+  <p class="complete">We've added your card details</p>
+  <button class="continue" type="button">Continue</button>
+  </div>
+</div>
+</div>
+</body>
+</html>
