@@ -53,7 +53,7 @@ exp2.addEventListener("input",()=>{
 });
 
 exp.addEventListener("input",()=>{
-    let value = exp2.value;
+    let value = exp.value;
     exdate3.innerText=value;
 });
 exp2.addEventListener("input",()=>{
